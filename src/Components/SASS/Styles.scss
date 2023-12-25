@@ -1,0 +1,31 @@
+@import "./config";
+@import "menu/menu";
+@import "Shop/shop";
+@import "itemPage/itemPage";
+@import "Shop/shopSections/Filters/filter";
+@import "landing/landing";
+@import "cart/cart-module";
+@import "footer/footer";
+@import "alta/alta";
+@import "sobreNosotros/sobreNosotros";
+@import "contactos/contactos";
+@import "prePage/prePage";
+@import "User/user";
+@import "User/userPage/userPage";
+@import "User/userPage/userMenu/userMenu";
+@import "User/userPage/userInfo/userAdress";
+@import "User/userPage/userInfo/userAuth";
+@import "User/userPage/userInfo/userCart";
+@import "User/userPage/userInfo/userOrders";
+@import "User/userPage/userInfo/userProfile";
+body {
+  font-family: Arial, sans-serif;
+  margin-top: 53px;
+}
+.reset {
+  text-decoration: none;
+  color: #fff;
+}
+.short_des {
+  text-align: center;
+}

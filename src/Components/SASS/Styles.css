@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin-top: 53px;
+}
+
+.reset {
+  text-decoration: none;
+  color: #fff;
+}
+
+.short_des {
+  text-align: center;
+}/*# sourceMappingURL=Styles.css.map */

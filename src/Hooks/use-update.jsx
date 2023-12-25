@@ -1,0 +1,41 @@
+const useUpdate = (load, suc, fail, a) => {
+  const navigate = useNavigate();
+  const update = async (data, url) => {
+    try {
+      var id = toast.loading(load);
+
+      const response = await fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error(response.message);
+      }
+      const user = await response.json();
+      toast.update(id, {
+        render: suc,
+        type: "success",
+        isLoading: false,
+        autoClose: true,
+      });
+      localStorage.setItem("USER", JSON.stringify(user));
+      navigate(a ? a : "/");
+      return;
+    } catch (error) {
+      console.error("error: ", error);
+      toast.update(id, {
+        render: fail,
+        type: "error",
+        isLoading: false,
+        autoClose: true,
+      });
+    }
+  };
+
+  return update;
+};
+export default useUpdate;
